@@ -2,6 +2,14 @@
 
 exports[`Input Component should render without crashing 1`] = `
 <input
+  style={
+    Object {
+      "borderColor": "#66ce66",
+      "boxShadow": "none",
+      "offset": "none",
+      "outline": "none",
+    }
+  }
   type="text"
 />
 `;

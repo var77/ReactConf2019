@@ -3,17 +3,51 @@
 exports[`App component renders without crashing 1`] = `
 <div
   className="App"
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "justifyContent": "center",
+    }
+  }
 >
-  <h1>
-    React Tests
-  </h1>
-  <Input
-    disabled={false}
-  />
-  <Checkbox
-    checked={false}
-    onCheck={[Function]}
-    u={true}
-  />
+  <div
+    style={
+      Object {
+        "background": "#e2e2e2",
+        "display": "flex",
+        "flexDirection": "column",
+        "height": 500,
+        "width": 500,
+      }
+    }
+  >
+    <h1>
+      React Conf 2019
+    </h1>
+    <div>
+      <h3>
+        Regular Input
+      </h3>
+      <Input
+        disabled={false}
+        id="first-input"
+      />
+      <Checkbox
+        checked={false}
+        onCheck={[Function]}
+      />
+    </div>
+    <div>
+      <h3>
+        Email Input
+      </h3>
+      <Input
+        email={true}
+        onChange={[Function]}
+        value=""
+      />
+    </div>
+  </div>
 </div>
 `;
