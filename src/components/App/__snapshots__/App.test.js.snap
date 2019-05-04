@@ -44,6 +44,7 @@ exports[`App component renders without crashing 1`] = `
       </h3>
       <Input
         email={true}
+        id="email-input"
         onChange={[Function]}
         value=""
       />

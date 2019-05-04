@@ -14,7 +14,7 @@ const Input = ({ value, onChange, disabled, email, ...props }) => {
     }, [value]);
 
     return <input type="text" {...props} value={value} onChange={onChange} disabled={disabled}
-                  style={{ borderColor: isValidEmail ? '#66ce66' : 'red', outline: 'none', offset: 'none', boxShadow: 'none' }}/>;
+                  style={{ borderColor: isValidEmail ? 'rgb(102, 206, 102)' : 'rgb(255, 0, 0)', outline: 'none', offset: 'none', boxShadow: 'none' }}/>;
 };
 
 export default Input;

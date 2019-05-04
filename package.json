@@ -63,7 +63,6 @@
     "test": "node scripts/test.js",
     "test:ci": "CI=true node scripts/test.js",
     "cypress:open": "yarn run cypress open",
-    "cypress:ci": "cypress run",
     "cypress:run": "BROWSER=none start-server-and-test start http://localhost:3000 'cypress:ci'"
   },
   "eslintConfig": {

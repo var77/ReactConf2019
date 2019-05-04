@@ -28,7 +28,7 @@ class App extends Component {
                   </div>
                   <div>
                       <h3>Email Input</h3>
-                      <Input email onChange={e => this.setState({ email: e.target.value })} value={this.state.email}/>
+                      <Input id="email-input" email onChange={e => this.setState({ email: e.target.value })} value={this.state.email}/>
                   </div>
               </div>
           </div>
