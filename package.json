@@ -66,6 +66,11 @@
     "cypress:run": "BROWSER=none start-server-and-test start http://localhost:3000 'cypress:ci'",
     "cypress:ci": "cypress run"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test:ci"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -131,6 +136,7 @@
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
+    "husky": "^2.2.0",
     "start-server-and-test": "^1.9.0"
   }
 }
