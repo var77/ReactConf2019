@@ -61,9 +61,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "test:ci": "CI=true node scripts/test.js",
+    "test:ci": "CI=true node scripts/test.js && concurrently  'yarn cypress:run' -k -s first",
     "cypress:open": "yarn run cypress open",
-    "cypress:run": "BROWSER=none start-server-and-test start http://localhost:3000 'cypress:ci'"
+    "cypress:run": "BROWSER=none start-server-and-test start http://localhost:3000 'cypress:ci'",
+    "cypress:ci": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -129,6 +130,7 @@
     ]
   },
   "devDependencies": {
-    "start-server-and-test": "^1.7.11"
+    "concurrently": "^4.1.0",
+    "start-server-and-test": "^1.9.0"
   }
 }
