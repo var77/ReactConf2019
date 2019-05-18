@@ -15,9 +15,10 @@ describe('Input Component', () => {
         let el = null;
         const onChange = jest.fn((e) => el.setProps({ value: e.target.value }));
         el = shallow(<Input onChange={onChange} value={val} />);
-        expect(el.props().value).toBe(val);
-        el.simulate('change', { target: { value: changedVal } });
-        expect(el.props().value).toBe(changedVal);
+        const input = el.find('input');
+        expect(input.props().value).toBe(val);
+        input.simulate('change', { target: { value: changedVal } });
+        expect(el.find('input').props().value).toBe(changedVal);
     });
 
     it ('should properly validate the email', () => {
@@ -26,8 +27,9 @@ describe('Input Component', () => {
         let el = null;
         const onChange = jest.fn((e) => el.setProps({ value: e.target.value }));
         el = mount(<Input onChange={onChange} value={val} email={true}/>);
-        el.simulate('change', { target: { value: changedVal } });
-        expect(el.props().value).toBe(changedVal);
+        const input = el.find('input');
+        input.simulate('change', { target: { value: changedVal } });
+        expect(el.find('input').props().value).toBe(changedVal);
         //This should throw an error because we can not get the state of functional components
         // expect(el.state().isValidEmail).toBe(true);
     });

@@ -12,42 +12,60 @@ exports[`App component renders without crashing 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "background": "#e2e2e2",
-        "display": "flex",
-        "flexDirection": "column",
-        "height": 500,
-        "width": 500,
-      }
-    }
+    className="mainCard"
   >
-    <h1>
+    <h1
+      className="headerText"
+    >
       React Conf 2019
     </h1>
-    <div>
-      <h3>
-        Regular Input
-      </h3>
-      <Input
-        disabled={false}
-        id="first-input"
-      />
-      <Checkbox
-        checked={false}
-        onCheck={[Function]}
-      />
-    </div>
-    <div>
-      <h3>
-        Email Input
-      </h3>
-      <Input
-        email={true}
-        id="email-input"
-        onChange={[Function]}
-        value=""
-      />
+    <div
+      className="card card-4 card-space"
+    >
+      <div
+        className="inputSize"
+      >
+        <h3
+          className="inputText"
+        >
+          Regular Input
+        </h3>
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <Input
+                  disabled={false}
+                  id="first-input"
+                />
+              </td>
+              <td>
+                <Checkbox
+                  checked={false}
+                  onCheck={[Function]}
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        className="inputSize"
+      >
+        <h3
+          className="inputText"
+        >
+          Email Input
+        </h3>
+        <div>
+          <Input
+            email={true}
+            id="email-input"
+            onChange={[Function]}
+            value=""
+          />
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -19,16 +19,30 @@ class App extends Component {
   render () {
       return (
           <div className="App" style={flexCenter}>
-              <div style={{ width: 500, height: 500, background: '#e2e2e2', display: 'flex', flexDirection: 'column' }}>
-                  <h1>React Conf 2019</h1>
-                  <div>
-                      <h3>Regular Input</h3>
-                      <Input disabled={this.state.inputDisabled} id="first-input" />
-                      <Checkbox onCheck={e => this.setState({ inputDisabled: e.target.checked })} checked={this.state.inputDisabled} />
-                  </div>
-                  <div>
-                      <h3>Email Input</h3>
-                      <Input id="email-input" email onChange={e => this.setState({ email: e.target.value })} value={this.state.email}/>
+              <div className="mainCard">
+                  <h1 className="headerText">React Conf 2019</h1>
+                  <div className="card card-4 card-space">
+                      <div className="inputSize">
+                          <h3 className="inputText">Regular Input</h3>
+                          <table>
+                              <tbody>
+                              <tr>
+                                  <td>
+                                      <Input disabled={this.state.inputDisabled} id="first-input" />
+                                  </td>
+                                  <td>
+                                      <Checkbox onCheck={e => this.setState({ inputDisabled: e.target.checked })} checked={this.state.inputDisabled} />
+                                  </td>
+                              </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <div className="inputSize">
+                          <h3 className="inputText">Email Input</h3>
+                          <div>
+                              <Input id="email-input" email onChange={e => this.setState({ email: e.target.value })} value={this.state.email} />
+                          </div>
+                      </div>
                   </div>
               </div>
           </div>
