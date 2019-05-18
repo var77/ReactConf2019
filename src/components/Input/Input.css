@@ -204,7 +204,7 @@ a.demo {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  color: #BFD2FF;
+  color: #ff3e17;
   font-size: 1.8rem;
   line-height: 2.4rem;
   vertical-align: middle;
@@ -274,7 +274,7 @@ a.demo {
 .mainCard{
     width: 46vw;
     height: 46vh;
-    display: 'flex'; 
+    display: 'flex';
     flex-direction: 'column';
 }
 
@@ -295,7 +295,6 @@ a.demo {
 }
 
 .checkboxStyle {
-    width: 30vw;
-    height: 3vh;
-    margin-left: 10px;
+  transform: scale(1.5);
+  margin-left: 10px;
 }

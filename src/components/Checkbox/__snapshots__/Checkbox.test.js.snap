@@ -2,6 +2,8 @@
 
 exports[`Checkbox Component should render without crashing 1`] = `
 <input
+  height={30}
   type="checkbox"
+  width={30}
 />
 `;

@@ -1,15 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input Component should render without crashing 1`] = `
-<input
-  style={
-    Object {
-      "borderColor": "rgb(102, 206, 102)",
-      "boxShadow": "none",
-      "offset": "none",
-      "outline": "none",
-    }
-  }
-  type="text"
-/>
+<div
+  className="webflow-style-input"
+>
+  <input
+    type="text"
+  />
+</div>
 `;

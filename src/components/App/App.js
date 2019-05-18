@@ -24,10 +24,18 @@ class App extends Component {
                   <div className="card card-4 card-space">
                       <div className="inputSize">
                           <h3 className="inputText">Regular Input</h3>
-                          <div className="checkbox-input">
-                              <Input disabled={this.state.inputDisabled} id="first-input" />
-                              <Checkbox onCheck={e => this.setState({ inputDisabled: e.target.checked })} checked={this.state.inputDisabled} />
-                          </div>
+                          <table>
+                              <tbody>
+                              <tr>
+                                  <td>
+                                      <Input disabled={this.state.inputDisabled} id="first-input" />
+                                  </td>
+                                  <td>
+                                      <Checkbox onCheck={e => this.setState({ inputDisabled: e.target.checked })} checked={this.state.inputDisabled} />
+                                  </td>
+                              </tr>
+                              </tbody>
+                          </table>
                       </div>
                       <div className="inputSize">
                           <h3 className="inputText">Email Input</h3>
